@@ -20,7 +20,12 @@ public class Equipo {
     
     public int puntos() { return puntos; }
     
-    public void sumarPuntos(int puntos) {} 
+    public void sumarPuntos(int puntos) {
+        assert puntos >= 0; 
+        this.puntos = this.puntos + puntos;
+    } 
     
-    public void mostrar() {}
+    public void mostrar() {
+        System.out.println("El equipo " + this.nombre + " viste de color " + this.color + " y tiene " + this.puntos + " puntos.");
+    }
 }
