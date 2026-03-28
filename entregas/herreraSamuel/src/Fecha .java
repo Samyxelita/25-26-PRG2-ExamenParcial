@@ -14,7 +14,11 @@ class Fecha {
     }
 
     public boolean esIgual(Fecha otraFecha){
-        return false;
+       return (this.dia == otraFecha.dia) && 
+               (this.mes == otraFecha.mes) && 
+               (this.anio == otraFecha.anio);
     }
-    public void mostrar(){}
+    public void mostrar(){
+        System.out.println(this.dia + "/" + this.mes + "/" + this.anio);
+    }
 }
