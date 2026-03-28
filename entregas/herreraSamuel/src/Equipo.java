@@ -14,11 +14,11 @@ public class Equipo {
         this.puntos = 0; 
     }
     
-    public String nombre() { return ""; } 
+    public String nombre() { return nombre; } 
     
-    public String color() { return ""; }
+    public String color() { return color; }
     
-    public int puntos() { return 0; }
+    public int puntos() { return puntos; }
     
     public void sumarPuntos(int puntos) {} 
     
