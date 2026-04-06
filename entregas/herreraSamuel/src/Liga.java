@@ -37,9 +37,22 @@ public class Liga {
         partido.registrarResultado(golesLocal, golesVisitante);
     }
     
-    public void consultarClasificacion() {}
+    public void consultarClasificacion() {
+       System.out.println("\n=== CLASIFICACIÓN: " + this.nombre + " - " + this.temporada + " ===");
+        for (int i = 0; i < this.numeroDeEquipos; i++) {
+            this.equipos[i].mostrar();
+        }
+    }
     
-    public void consultarPartidosPendientes() {}
+    
+    public void consultarPartidosPendientes() {
+        System.out.println("\n=== PARTIDOS PENDIENTES ===");
+        for (int i = 0; i < this.numeroDePartidos; i++) {
+            if (!this.partidos[i].estaJugado()) {
+                this.partidos[i].mostrar();
+            }
+        }
+    }
 
     
 }
