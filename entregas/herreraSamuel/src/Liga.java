@@ -26,9 +26,16 @@ public class Liga {
         this.numeroDeEquipos++;
    }
     
-    public void programarPartido(Partido partido) {}
+    public void programarPartido(Partido partido) {
+        assert this.numeroDePartidos < this.partidos.length;
+        this.partidos[this.numeroDePartidos] = partido;
+        this.numeroDePartidos++;
+    }
     
-    public void registrarResultado(Partido partido, int golesLocal, int golesVisitante) {}
+    public void registrarResultado(Partido partido, int golesLocal, int golesVisitante) {
+        assert golesLocal >= 0 && golesVisitante >= 0;
+        partido.registrarResultado(golesLocal, golesVisitante);
+    }
     
     public void consultarClasificacion() {}
     
