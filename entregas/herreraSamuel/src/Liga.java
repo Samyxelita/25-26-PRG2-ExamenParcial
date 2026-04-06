@@ -20,7 +20,11 @@ public class Liga {
         this.numeroDeEquipos = 0;
         this.numeroDePartidos = 0;
     }
-   public void agregarEquipo(Equipo equipo) {}
+   public void agregarEquipo(Equipo equipo) {
+    assert this.numeroDeEquipos < this.equipos.length;
+        this.equipos[this.numeroDeEquipos] = equipo;
+        this.numeroDeEquipos++;
+   }
     
     public void programarPartido(Partido partido) {}
     
